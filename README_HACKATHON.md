@@ -39,6 +39,3 @@ cd pulsemind && npm install && npm start           # http://localhost:3000
 
 تجربة ملهمة تعلّمت منها الكثير: تحويل فكرة أولية إلى منتج عملي، العمل المباشر مع نماذج الذكاء الاصطناعي، وأهمية بناء حلول تقنية مسؤولة تدعم الصحة النفسية وتعزز رفاهية المستخدمين.
 
-كل الشكر لفريقي الرائع على تعاونهم وجهودهم، ولمنظمي USAII Global AI Hackathon 2026 على هذه التجربة القيّمة. 🤍
-
-#USAII #GlobalAIHackathon2026 #AI #ArtificialIntelligence #Hackathon
