@@ -1,29 +1,44 @@
-# PulseMind Demo
+# PulseMind — رفيقك الذكي ضد الاحتراق الأكاديمي
 
-Run the demo with one file:
+مشروع طُوّر ضمن **USAII Global AI Hackathon 2026** 🚀، يستخدم الذكاء الاصطناعي لقياس مستوى الاحتراق الأكاديمي لدى الطلاب بناءً على جداولهم الدراسية وأعبائهم اليومية، ويساعدهم على توزيع مهامهم بذكاء قبل أن يتراكم الضغط.
 
-```text
+## الفكرة
+
+بدأت PulseMind كموقع إلكتروني يعتمد على نموذج ذكاء اصطناعي مُدرَّب لتقييم مستوى الاحتراق الأكاديمي لدى الطلاب. خلال الهاكاثون تطورت الفكرة إلى تطبيق متكامل: **Smart Workload Planner** يحلّل جدول الطالب ومواعيده النهائية، وعند إضافة مهمة جديدة يقترح أفضل وقت لإدراجها ضمن أسبوعه — بدلًا من تكديس المهام — اعتمادًا على:
+
+- كثافة الجدول الحالي (Calendar events)
+- ضغط المواعيد النهائية (Deadline pressure)
+- حجم المهمة المقدّر (Estimated workload)
+- مستوى الاحتراق الحالي (Burnout score)
+- الحد اليومي المسموح من العمل (Daily workload limits)
+- احتمالية التأخير (Delay risk prediction)
+
+كما يضم التطبيق "المدرب الذكي" (AI Coach)، وهو مساعد محادثة مبني على Gemini يقدّم دعمًا نفسيًا مباشرًا ومبنيًا على بيانات المستخدم الفعلية (النوم، المزاج، مؤشرات الاحتراق الأكاديمي)، مع تحويل فوري لأي حالة طارئة إلى مصادر مساعدة مختصة حقيقية.
+
+## التقنيات
+
+**Frontend:** React (Create React App), i18n للعربية/الإنجليزية
+**Backend:** Node.js, Express, Rate limiting مخصص لحماية استهلاك الـ API
+**AI:** Google Gemini API، مع محرك احتياطي محلي (fallback engine) عند تعطّل الاتصال
+
+## التشغيل محليًا
+
+```bash
+# يشغّل الفرونت إند والباك إند معًا
 START_HERE.bat
 ```
 
-It automatically starts:
+أو يدويًا:
 
-- Frontend: http://localhost:3000
-- Backend: http://localhost:3001
+```bash
+cd pulsemind-backend && npm install && npm start   # http://localhost:3001
+cd pulsemind && npm install && npm start           # http://localhost:3000
+```
 
-Keep both terminal windows open during the demo.
+## ما تعلمته
 
-## Demo Focus
+تجربة ملهمة تعلّمت منها الكثير: تحويل فكرة أولية إلى منتج عملي، العمل المباشر مع نماذج الذكاء الاصطناعي، وأهمية بناء حلول تقنية مسؤولة تدعم الصحة النفسية وتعزز رفاهية المستخدمين.
 
-PulseMind is not a manual task manager. The user enters a task, deadline, estimated hours, priority, and difficulty. PulseMind automatically generates burnout-aware work sessions and places them into the calendar.
+كل الشكر لفريقي الرائع على تعاونهم وجهودهم، ولمنظمي USAII Global AI Hackathon 2026 على هذه التجربة القيّمة. 🤍
 
-The Smart Workload Planner uses:
-
-- Existing calendar events
-- Deadline pressure
-- Estimated workload
-- Burnout score
-- Daily workload limits
-- Delay risk prediction
-
-This makes the feature useful for both students and employees.
+#USAII #GlobalAIHackathon2026 #AI #ArtificialIntelligence #Hackathon
